@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="header_title">
+        <div style="flex:8; text-align:center">
+          Passwords
+        </div>
+        <div>
+          <ion-icon name="more" routerLink="/account"></ion-icon>
+        </div>
+      </div>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="search">
+    <ion-searchbar (ionChange) = searchPassword($event) [(ngModel)] = "search_key"></ion-searchbar>
+  </div>
+  <div style="margin-top: 72px;">
+    <div *ngFor="let field of search_result; let i = index" class="category_item" (click)="presentActionSheet(field , i)">
+      <div class="firstletter">
+        {{field.account_name | firstletter}}
+      </div>
+      <div class="name">
+        {{field.account_name}}
+      </div>
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add" routerLink="/dashboard/add-new-item"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

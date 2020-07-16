@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      View Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none" style="--background: #eee">
+    <ion-label>Edit</ion-label>
+    <ion-toggle (ionChange)="toggleEditabel()" mode="md"></ion-toggle>
+  </ion-item>
+  <div class="fields">
+    <ion-label position="fixed">Account Name</ion-label>
+    <ion-input [(ngModel)]="account_name" [disabled]=!editable></ion-input>
+  </div>
+  <div class="fields">
+    <ion-label position="fixed">Account UserName/Id/Number</ion-label>
+    <ion-input [(ngModel)]="account_id" [disabled]=!editable></ion-input>
+  </div>
+  <div class="fields password">
+    <div style="width: 100%;">
+      <ion-label>Account Password</ion-label>
+      <ion-input [(ngModel)]="decrypted_password" [type]="passwordInputType" [disabled]=!editable></ion-input>
+    </div>
+    <ion-icon [name]="passwordInputType == 'password' ? 'eye' : 'eye-off'" (click)="togglePasswordInputType()">
+    </ion-icon>
+  </div>
+  <ion-button  class="save_btn" (click)="getEncryptedPassword()" [disabled]=!editable>
+    Save
+  </ion-button>
+</ion-content>

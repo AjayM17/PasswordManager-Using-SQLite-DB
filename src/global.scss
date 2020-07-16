@@ -24,3 +24,45 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.header-md:after{
+    background-image: none !important;
+}
+ion-toolbar{
+     --background: var(--ion-color-primary);
+    color: white;
+    --border-width: 0px !important;
+    ion-title{
+        font-weight: 400;
+    }
+}
+
+ion-menu-button{
+    color: white;
+}
+
+ion-back-button{
+    --color: white  !important;
+}
+
+.toast-style{
+    --background: #555555;
+    color: white;
+}
+
+
+.view-details-modal{
+    // --height:32vh;
+     --background:transparent;
+    // .modal-wrapper.ios.sc-ion-modal-ios {
+    //     position: absolute;
+    //     bottom: 0;
+    // }
+}
+
+ion-item{
+    --highlight-background: none !important;
+    --highlight-height: 0px;
+}
+

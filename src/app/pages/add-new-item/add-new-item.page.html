@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Add New
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="diplay_at_center">
+    <div class="add_fileds">
+      <ion-item class="login_input">
+        <ion-input placeholder="Account Name" [(ngModel)]="account_name"></ion-input>
+      </ion-item>
+      <ion-item class="login_input">
+        <ion-input placeholder="Account UserName/Id/Number" [(ngModel)]="account_id"></ion-input>
+      </ion-item>
+      <ion-item class="login_input">
+        <div class="login_input">
+          <ion-input placeholder="Account Password" [(ngModel)]="account_password" [type]="passwordInputType"></ion-input>
+          <ion-icon [name]="passwordInputType == 'password' ? 'eye' : 'eye-off'" (click)="togglePasswordInputType()">
+          </ion-icon>
+        </div>
+      </ion-item>
+      <div  class="add_btn" (click)="getEncryptedPassword()">
+        Add
+      </div>
+    </div>
+  </div>
+</ion-content>

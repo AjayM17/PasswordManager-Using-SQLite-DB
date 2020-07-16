@@ -1,0 +1,29 @@
+.fields{
+    padding-left: 16px;
+    margin-top: 16px;
+    border-bottom: 1px solid #eee;
+    ion-label{
+        font-size: 18px;
+    }
+    ion-input{
+        font-size: 18px;
+    }
+ 
+    ion-icon{
+        font-size: 30px;
+        margin-right: 12px;
+        padding: 16px;
+        color: #4d4d4d;
+    }
+}
+.password{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.save_btn{
+    margin-top: 34px;
+    margin-left: 16px;
+    --border-radius: 3px;
+ }

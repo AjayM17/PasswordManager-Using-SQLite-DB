@@ -1,0 +1,53 @@
+
+
+<ion-content>
+  <div class="top-left-strip">
+
+  </div>
+  <div class="diplay_at_center">
+
+
+    <div class="page_header_text">
+      <div style="    font-size: 2.4rem;">
+        Password
+      </div>
+      <div style="font-size: 1.7rem;">
+        Manager
+      </div>
+    </div>
+    <div class="login_fields">
+      <div class="title">
+        SignIn
+      </div>
+      <ion-item class="login_input">
+        <ion-label position="floating">Mobile Number</ion-label>
+        <ion-input [(ngModel)]="mobile_number" type="text"></ion-input>
+      </ion-item>
+      <ion-item class="login_input">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+      <ion-item class="login_input">
+        <ion-label position="floating">Re-enter password</ion-label>
+        <ion-input [(ngModel)]="re_password" type="password"></ion-input>
+      </ion-item>
+      <div class="signup_btn" (click)="registerUser()">
+        Signup
+      </div>
+    
+
+        <div class="back" (click)="goBackToLogin()">
+          <ion-icon name="arrow-back"></ion-icon>
+       <span>go to login</span>
+      </div>
+    </div>
+
+
+  </div>
+
+</ion-content>
+<ion-footer>
+  <div class="bottom-right-strip">
+
+  </div>
+</ion-footer>
